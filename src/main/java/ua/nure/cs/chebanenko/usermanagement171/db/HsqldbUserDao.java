@@ -118,9 +118,10 @@ public class HsqldbUserDao implements Dao<User> {
 	
 	public Collection<User> findAll() throws DatabaseException {
 		Collection <User> result = new LinkedList<User>();
-		Connection connection = connectionFactory.createConnection();
+		
 		Statement statement;
 		try {
+			Connection connection = connectionFactory.createConnection();
 			statement = connection.createStatement();
 			ResultSet resultSet = statement.executeQuery(SELECT_ALL_QUERY);
 			while(resultSet.next()) {

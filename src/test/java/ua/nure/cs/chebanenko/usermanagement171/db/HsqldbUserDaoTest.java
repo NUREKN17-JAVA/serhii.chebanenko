@@ -86,7 +86,7 @@ public class HsqldbUserDaoTest extends TestCase {
 	public void testFindAll() throws DatabaseException {
 		Collection <User> users= dao.findAll();
 		assertNotNull(users);
-		assertEquals("Collection size does not match",2, users.size());
+		assertEquals("Collection size does not match", 2, users.size());
 	}
 	protected void tearDown() throws Exception {
 		super.tearDown();
